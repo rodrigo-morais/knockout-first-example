@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Knockout first example</title>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/knockout/dist/knockout.js"></script>
+    <script src="js/products.js"></script>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <label for="price">Price:</label>
+        <input type="number" id="price">
+        <button id="add">Add Product</button>
+    </form>
+
+    <h2>Products</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: products">
+            <tr>
+                <td>
+                    <span data-bind="text: name"></span>
+                </td>
+                <td>
+                    <span data-bind="text: price"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
