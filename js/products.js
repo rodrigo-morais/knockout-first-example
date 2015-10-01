@@ -6,8 +6,8 @@ $(document).ready(function() {
         { name: 'Product One', price: 120 }
     ]);
  
-    self.addProducts = function(_name, _price) {
-        self.products.push({ name: _name, price: _price });
+    self.addProducts = function(_form) {
+        self.products.push({ name: _form['name'].value, price: _form['price'].value });
     };
  
     self.removeProducts = function() {
