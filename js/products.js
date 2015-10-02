@@ -1,6 +1,8 @@
 $(document).ready(function() {
-    function AppViewModel() {
+    function CompanyViewModel() {
     var self = this;
+
+    self.company = ko.observable('test');
  
     self.products = ko.observableArray([
         { name: 'Product One', price: 120 }
@@ -15,5 +17,5 @@ $(document).ready(function() {
     }
 }
  
-ko.applyBindings(new AppViewModel());
+ko.applyBindings(new CompanyViewModel());
 });
